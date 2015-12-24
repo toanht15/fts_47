@@ -117,9 +117,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rails-i18n (4.0.7)
-      i18n (~> 0.7)
-      railties (~> 4.0)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -184,7 +181,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   rails (= 4.2.5)
-  rails-i18n (~> 4.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
