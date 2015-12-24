@@ -1,2 +1,4 @@
 rails_site: "http://www.railstutorial.org"
 rails_news_site: "http://news.railstutorial.org/"
+size: 50
+avatar: "https://secure.gravatar.com/avatar/"
