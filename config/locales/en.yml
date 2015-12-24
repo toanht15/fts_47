@@ -20,3 +20,9 @@ en:
     login: "Log in"
   signup:
     signup_now: "Sign up now!"
+  user_submit: "Sign up"
+  user_update: "Update"
+  user_edit: "Edit user"
+  user_editprofile: "Edit Profile"
+  user_login: "Sign in"
+  user_login_title: "Log in"
