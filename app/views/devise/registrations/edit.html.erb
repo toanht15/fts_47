@@ -19,5 +19,8 @@
 
       <%= f.submit t("user_update"), class: "btn btn-primary" %>
     <% end %>
+    <br>
+    <%= link_to t("user_delete_account"), registration_path(resource_name),
+        data: {confirm: t("user_delete_account_confirm")}, method: :delete, class: "btn btn-primary btn-sm btn-danger" %>
   </div>
 </div>

@@ -28,3 +28,5 @@ en:
   user_login_title: "Log in"
   user_account: "Account"
   user_logout: "Log out"
+  user_delete_account: "delete account"
+  user_delete_account_confirm: "Are you sure?"
