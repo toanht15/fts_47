@@ -1,0 +1,13 @@
+<footer class="footer">
+  <small>
+    <a href=<%= Settings.rails_site %>><%= t "static_pages.rubyonrails" %></a>
+    <%= t "static_pages.michael" %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("static_pages.about"), about_path %></li>
+      <li><%= link_to t("static_pages.contact"), contact_path %></li>
+      <li><a href=<%= Settings.rails_news_site %>><%= t "static_pages.new" %></a></li>
+    </ul>
+  </nav>
+</footer>
