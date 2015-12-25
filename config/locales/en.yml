@@ -36,3 +36,9 @@ en:
   header_users_link: "Users"
   admin_set_users: "Set admin"
   user_type: "normal"
+  category:
+    title: "Category"
+    created_successfull: "Category created successfull"
+    create: "Create"
+  error: "error"
+  form_error: "The form contains "
