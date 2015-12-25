@@ -1,0 +1,27 @@
+<% provide :title, t("category.title") %>
+<h1><%= t "category.title" %></h1>
+<div id="wrapper">
+  <div class="content container">
+    <div class="row exam">
+      <div class="col-md-10 col-md-offset-1">
+        <div>
+          <%= link_to t("category.create"), new_admin_category_path , class: "btn btn-success button" %>
+        </div>
+        <br>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="name"><%= t "category.name" %></th>
+              <th class="created_date"><%= t "category.created_at" %></th>
+              <th class="action"><%= t "category.action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @categories %>
+          </tbody>
+        </table>
+        <%= paginate @categories %>
+      </div>
+    </div>
+  </div>
+</div>

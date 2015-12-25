@@ -10,3 +10,8 @@ User.create!(name: "Cao-Phuong-Anh", email: "thuanbk56@gmail.com",
 end
 
 User.create!(email: "thetoan@gmail.com", password: "12345678", admin: true)
+
+50.times do |n|
+  name = Faker::Lorem.word
+  Category.create(name: name)
+end

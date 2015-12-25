@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    root "users#index"
+    root "categories#index"
     resources :users
     resources :categories
   end
