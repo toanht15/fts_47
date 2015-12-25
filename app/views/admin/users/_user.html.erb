@@ -1,14 +1,11 @@
 <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td class="16_btn_admin"><%= t "user_type" %></td>
   <% if can? :delete, user %>
     <td>
-    <%= link_to t("admin_set_users"), "#", class: "16_btn_admin btn btn-primary" %>
-    </td>
-    <td>
     <% unless user.admin?%>
-    <%= link_to t("delete"), admin_user_path(user), method: :delete, data: {confirm: t("you_sure")} %>
+    <%= link_to t("delete"), admin_user_path(user), class: "16_btn_admin btn btn-primary",
+      method: :delete, data: {confirm: t("you_sure")} %>
     <% end %>
     </td>
   <% end %>

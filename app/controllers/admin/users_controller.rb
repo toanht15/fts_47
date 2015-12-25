@@ -1,8 +1,9 @@
 class Admin::UsersController < ApplicationController
-  load_and_authorize_resource only: [:destroy]
+  load_and_authorize_resource only: [:destroy, :index]
 
   def index
-    @users = User.paginate page: params[:page]
+    @search = @users.search params[:q]
+    @users = @search.result.paginate page: params[:page]
   end
 
   def destroy
