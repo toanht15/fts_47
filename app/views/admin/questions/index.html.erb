@@ -1,0 +1,19 @@
+<div class="form-control">
+  <%= link_to t("question.create"), new_admin_question_path %>
+</div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th><%= t "question.id" %></th>
+    <th><%= t "question.content" %></th>
+    <th><%= t "question.category" %></th>
+    <th><%= t "question.type" %></th>
+    <th><%= t "question.answers" %></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody id="questions">
+    <%= render @questions %>
+  </tbody>
+</table>
+<%= paginate @questions %>

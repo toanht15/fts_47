@@ -2,3 +2,11 @@ rails_site: "http://www.railstutorial.org"
 rails_news_site: "http://news.railstutorial.org/"
 size: 50
 avatar: "https://secure.gravatar.com/avatar/"
+number_answer: 4
+
+question:
+  types:
+    single: "single_choice"
+    multiple: "multiple_choices"
+    text: "text"
+  num_correct: 1
