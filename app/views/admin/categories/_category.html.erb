@@ -1,0 +1,8 @@
+<tr>
+  <td><%= category.name %></td>
+  <td><%= category.created_at.strftime t("time") %></td>
+  <td>
+    <%= link_to t("delete"), admin_category_path(category), class: "btn btn-danger btn-xs",
+      method: :delete, data: {confirm: t("you_sure")} %>
+  </td>
+</tr>
