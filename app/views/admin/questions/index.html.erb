@@ -1,3 +1,21 @@
+<% provide :title, t("question.all_question") %>
+<h1><%= t "question.title" %></h1>
+
+<div class="form-horizontal">
+  <fieldset>
+    <%= search_form_for [:admin, @search] do |f| %>
+      <div class="form-group">
+        <div class="col-lg-3">
+          <%= f.text_field :content_eq, class: "form-control", placeholder: t("question.placeholder") %>
+        </div>
+        <div class="col-lg-1">
+          <%= f.submit t("search"), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </fieldset>
+</div>
+
 <div class="form-control">
   <%= link_to t("question.create"), new_admin_question_path %>
 </div>
