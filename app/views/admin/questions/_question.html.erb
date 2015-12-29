@@ -13,6 +13,6 @@
   </td>
   <td>
     <%= link_to t("question.edit"), "#" %>
-    <%= link_to t("question.delete"), "#", method: :delete, data: {confirm: t("you_sure")} %>
+    <%= link_to t("question.delete"), admin_question_path(question), method: :delete, data: {confirm: t("you_sure")} %>
   </td>
 </tr>

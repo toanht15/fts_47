@@ -3,7 +3,8 @@ class Admin::QuestionsController < ApplicationController
   before_action :load_categories
 
   def index
-    @questions = @questions.paginate page: params[:page]
+    @search = @questions.search params[:q]
+    @questions = @search.result.paginate page: params[:page]
   end
 
   def create
@@ -13,6 +14,12 @@ class Admin::QuestionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @question.destroy
+    flash[:success] = t "question.delete_succesfull"
+    redirect_to admin_questions_path
   end
 
   private

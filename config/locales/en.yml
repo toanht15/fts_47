@@ -70,3 +70,6 @@ en:
     error:
       blank: "Correct can not blank!"
       corect: "You must specify 1 and only 1 correct answer for question!"
+    delete_succesfull: "Delete question successfull!"
+    all_question: "All"
+    placeholder: "Enter a question"
