@@ -16,6 +16,18 @@ class Admin::QuestionsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @question.update_attributes question_params
+      flash[:success] = t "question.updated_succesfull"
+      redirect_to admin_questions_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @question.destroy
     flash[:success] = t "question.delete_succesfull"
