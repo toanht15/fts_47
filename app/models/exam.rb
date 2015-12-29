@@ -8,4 +8,12 @@ class Exam < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :category_id, presence: true
+
+  before_create :generate_questions
+
+  private
+  def generate_questions
+    self.questions = self.category.questions.order("RANDOM()").
+      limit Settings.exam.question_number
+  end
 end

@@ -74,3 +74,7 @@ en:
     updated_succesfull: "Update question successfull!"
     all_question: "All"
     placeholder: "Enter a question"
+  exam:
+    create: "Create Exam"
+    created: "Exam created successfull"
+    select_category: "Select a Category"
