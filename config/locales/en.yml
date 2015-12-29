@@ -82,3 +82,10 @@ en:
     create: "Create Exam"
     created: "Exam created successfull"
     select_category: "Select a Category"
+    start: "Start"
+    label:
+      created_date: "Created Date"
+      category: "Category"
+      status: "Status"
+      spent_time: "Spent Time"
+      mark: "Score"
