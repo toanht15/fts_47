@@ -11,6 +11,10 @@
         <div class="col-lg-1">
           <%= f.submit t("search"), class: "btn btn-primary" %>
         </div>
+        <div class="col-lg-3">
+          <%= render "filter_type" %>
+          <%= render "filter_status" %>
+        </div>
       </div>
     <% end %>
   </fieldset>
