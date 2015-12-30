@@ -11,7 +11,34 @@ end
 
 User.create!(email: "thetoan@gmail.com", password: "12345678", admin: true)
 
-50.times do |n|
+10.times do |n|
   name = Faker::Lorem.word
   Category.create(name: name)
+end
+
+Category.all.each{|category|
+  20.times do |n|
+    content = Faker::Lorem.word
+    question_type = 1;
+    Question.create!(
+      content: content,
+      category_id: category.id,
+      question_type: question_type)
+  end
+}
+
+Question.all.each do |n|
+  k = Random.rand(3) + 1
+  4.times do |t|
+    content = Faker::Lorem.word
+    if t == k
+      correct = true
+    else
+      correct = false
+    end
+    Answer.create(
+      content: content,
+      correct: correct,
+      question_id: n.id)
+  end
 end

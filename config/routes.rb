@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
   get "about" => "static_pages#about"
   devise_for :users
+  devise_scope :user do
+    authenticated :user do
+      root to: "exams#index", as: "authenticated_root"
+    end
+
+    unauthenticated do
+      root to: "static_pages#home", as: "root"
+    end
+  end
 
   namespace :admin do
     root "categories#index"
@@ -12,4 +20,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :questions
   end
+
+  resources :exams
 end
