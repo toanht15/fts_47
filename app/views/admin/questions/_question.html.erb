@@ -4,6 +4,19 @@
   <td><%= question.category.name %></td>
   <td><%= question.question_type %></td>
   <td>
+    <% if question.waitting? %>
+      <span class="label label-warning"><%= question.status %></span>
+    <% else %>
+      <span class="label label-success"><%= question.status %></span>
+    <% end %>
+  </td>
+  <td>
+    <% if question.waitting? %>
+      <%= link_to t("questions.accept"), admin_question_path(question,
+        question: {status: "accepted"}), method: :patch, class: "btn btn-primary btn-xs btn-danger" %>
+    <% end %>
+  </td>
+  <td>
     <% question.answers.each do |answer| %>
       <li>
         <%= answer.content %>

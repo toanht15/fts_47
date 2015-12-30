@@ -71,6 +71,8 @@ en:
     error:
       blank: "Correct can not blank!"
       corect: "You must specify 1 and only 1 correct answer for question!"
+      update_fails: "Question update fails!"
+      create_fails: "Question create fails!"
     delete_succesfull: "Delete question successfull!"
     updated_succesfull: "Update question successfull!"
     all_question: "All"
