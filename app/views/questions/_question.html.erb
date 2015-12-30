@@ -19,8 +19,8 @@
     <% end %>
   </td>
   <td>
-    <%= link_to t("question.edit"), "#", class: "btn btn-primary btn-xs" %>
-    <%= link_to t("question.delete"), "#",
+    <%= link_to t("question.edit"), edit_question_path(question), class: "btn btn-primary btn-xs" %>
+    <%= link_to t("question.delete"), question_path(question),
       class: "btn btn-primary btn-xs btn-danger", method: :delete, data: {confirm: t("you_sure")} %>
   </td>
 </tr>

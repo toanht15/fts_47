@@ -16,6 +16,21 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def update
+    if @question.update_attributes question_params
+      flash[:success] = t "question.updated_succesfull"
+      redirect_to questions_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @question.destroy
+    flash[:success] = t "question.delete_succesfull"
+    redirect_to questions_path
+  end
+
   private
   def question_params
     params.require(:question).permit :content, :question_type,
