@@ -5,7 +5,7 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :status, value: :start %>
 
-    <div class="col-md-3">
+    <div class="col-md-3 col-md-offset-1">
       <%= f.select :category_id,
         options_from_collection_for_select(@category, "id", "name"),
           {prompt: t("exam.select_category")}, class: "form-control" %>
@@ -16,3 +16,21 @@
     </div>
   <% end %>
 </div>
+<br/>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-bordered">
+      <tr>
+        <th><%= t "exam.label.created_date" %></th>
+        <th><%= t "exam.label.category" %></th>
+        <th><%= t "exam.label.status" %></th>
+        <th><%= t "exam.label.spent_time" %></th>
+        <th><%= t "exam.label.mark" %></th>
+        <th></th>
+      </tr>
+      <%= render @exams %>
+    </table>
+    <%= paginate @exams %>
+  </div>
+</div>
+

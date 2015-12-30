@@ -1,6 +1,9 @@
 User.create!(name: "Cao-Phuong-Anh", email: "thuanbk56@gmail.com",
   password: "pa0974340719", password_confirmation: "pa0974340719",
   admin: true)
+
+User.create!(email: "thetoan@gmail.com", password: "12345678", admin: true)
+
 99.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -8,8 +11,6 @@ User.create!(name: "Cao-Phuong-Anh", email: "thuanbk56@gmail.com",
   User.create!(name: name, email: email, password: password,
     password_confirmation: password, admin: false)
 end
-
-User.create!(email: "thetoan@gmail.com", password: "12345678", admin: true)
 
 10.times do |n|
   name = Faker::Lorem.word
@@ -19,7 +20,7 @@ end
 Category.all.each{|category|
   20.times do |n|
     content = Faker::Lorem.word
-    question_type = 1;
+    question_type = 1
     Question.create!(
       content: content,
       category_id: category.id,
@@ -42,3 +43,15 @@ Question.all.each do |n|
       question_id: n.id)
   end
 end
+
+Category.all.each{|category|
+  10.times do |n|
+    user_id = 3
+    status = "start"
+    Exam.create!(
+      user_id: user_id,
+      category_id: category.id,
+      status: status)
+end
+}
+

@@ -2,8 +2,9 @@ class ExamsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @exam = Exam.new
     @category = Category.all
+    @exam = Exam.new
+    @exams = @exams.page params[:page]
   end
 
   def create
