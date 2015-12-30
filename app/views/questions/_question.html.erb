@@ -1,0 +1,26 @@
+<tr>
+  <td><%= question.id %></td>
+  <td><%= question.content %></td>
+  <td><%= question.category.name %></td>
+  <td><%= question.question_type %></td>
+  <td>
+    <% if question.waitting? %>
+      <span class="label label-warning"><%= question.status %></span>
+    <% else %>
+      <span class="label label-success"><%= question.status %></span>
+    <% end %>
+  </td>
+  <td>
+    <% question.answers.each do |answer| %>
+      <li>
+        <%= answer.content %>
+        |<%= answer.correct %>
+      </li>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to t("question.edit"), "#", class: "btn btn-primary btn-xs" %>
+    <%= link_to t("question.delete"), "#",
+      class: "btn btn-primary btn-xs btn-danger", method: :delete, data: {confirm: t("you_sure")} %>
+  </td>
+</tr>

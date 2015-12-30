@@ -18,6 +18,7 @@ en:
     home: "Home"
     help: "Help"
     login: "Log in"
+    contribute: "Contribute Question"
   signup:
     signup_now: "Sign up now!"
   user_submit: "Sign up"
@@ -74,6 +75,9 @@ en:
     updated_succesfull: "Update question successfull!"
     all_question: "All"
     placeholder: "Enter a question"
+    status: "Status"
+    action: "Action"
+    accept: "Accept"
   exam:
     create: "Create Exam"
     created: "Exam created successfull"
