@@ -8,10 +8,13 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def create
+    @question.user_id = current_user.id
+    @question.status = Question.statuses[:accepted]
     if @question.save
       flash[:success] = t "question.success"
       redirect_to admin_questions_path
     else
+      flash[:error] = t "question.error.create_fails"
       render :new
     end
   end
@@ -24,6 +27,7 @@ class Admin::QuestionsController < ApplicationController
       flash[:success] = t "question.updated_succesfull"
       redirect_to admin_questions_path
     else
+      flash[:error] = t "question.error.update_fails"
       render :edit
     end
   end
@@ -37,7 +41,7 @@ class Admin::QuestionsController < ApplicationController
   private
   def question_params
     params.require(:question).permit :content, :question_type,
-      :category_id, answers_attributes: [:id, :content, :correct]
+      :category_id, :status, answers_attributes: [:id, :content, :correct]
   end
 
   def load_categories
