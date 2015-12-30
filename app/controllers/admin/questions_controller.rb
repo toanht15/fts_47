@@ -4,7 +4,8 @@ class Admin::QuestionsController < ApplicationController
 
   def index
     @search = @questions.search params[:q]
-    @questions = @search.result.paginate page: params[:page]
+    check = params[:check].nil? ? Settings.filter.all : params[:check]
+    @questions = @search.result.send(check).page params[:page]
   end
 
   def create

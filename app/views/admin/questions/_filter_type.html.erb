@@ -1,0 +1,18 @@
+<div class="navbar-form navbar-left">
+  <div class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+       aria-expanded="false"><%= t "question.type" %><span class="caret"></span>
+    </a>
+
+    <ul class="dropdown-menu">
+      <li><%= link_to  t("questions.filter_type.all"),
+        admin_questions_path(check: :all) %></li>
+      <li><%= link_to  t("questions.filter_type.single"),
+        admin_questions_path(check: :single_choice) %></li>
+      <li><%= link_to  t("questions.filter_type.multiple"),
+        admin_questions_path(check: :multiple_choices) %></li>
+      <li><%= link_to  t("questions.filter_type.text"),
+        admin_questions_path(check: :text) %></li>
+    </ul>
+  </div>
+</div>

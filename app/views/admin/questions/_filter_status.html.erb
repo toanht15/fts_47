@@ -1,0 +1,16 @@
+<div class="navbar-form navbar-left">
+  <div class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+       aria-expanded="false"><%= t "question.status" %><span class="caret"></span>
+    </a>
+
+    <ul class="dropdown-menu">
+      <li><%= link_to  t("questions.filter_type.all"),
+        admin_questions_path(check: :all) %></li>
+      <li><%= link_to  t("questions.filter_status.waitting"),
+        admin_questions_path(check: :waitting) %></li>
+      <li><%= link_to  t("questions.filter_status.accepted"),
+        admin_questions_path(check: :accepted) %></li>
+    </ul>
+  </div>
+</div>

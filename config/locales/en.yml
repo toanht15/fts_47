@@ -80,6 +80,14 @@ en:
     status: "Status"
     action: "Action"
     accept: "Accept"
+    filter_type:
+      all: "All"
+      single: "Single"
+      multiple: "Multiple"
+      text: "Text"
+    filter_status:
+      waitting: "Waitting"
+      accepted: "Accepted"
   exam:
     create: "Create Exam"
     created: "Exam created successfull"
