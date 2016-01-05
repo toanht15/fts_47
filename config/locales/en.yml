@@ -93,6 +93,9 @@ en:
     created: "Exam created successfull"
     select_category: "Select a Category"
     start: "Start"
+    finish: "Finish"
+    save: "Save"
+    test: "Test"
     label:
       created_date: "Created Date"
       category: "Category"

@@ -20,7 +20,7 @@ end
 Category.all.each{|category|
   20.times do |n|
     content = Faker::Lorem.word
-    question_type = 1
+    question_type = 0
     Question.create!(
       content: content,
       category_id: category.id,
@@ -47,11 +47,10 @@ end
 Category.all.each{|category|
   10.times do |n|
     user_id = 3
-    status = "start"
+    status = 0
     Exam.create!(
       user_id: user_id,
       category_id: category.id,
       status: status)
 end
 }
-
