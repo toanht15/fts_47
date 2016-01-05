@@ -7,6 +7,9 @@ class ExamsController < ApplicationController
     @exams = @exams.page params[:page]
   end
 
+  def show
+  end
+
   def create
     if @exam.save
       flash[:success] = t "exam.created"
@@ -18,6 +21,7 @@ class ExamsController < ApplicationController
 
   private
   def exam_params
-    params.require(:exam).permit :category_id, :user_id, :status
+    params.require(:exam).permit :category_id, :user_id, :status, results_attributes: [
+      :id, :question_id, content_answer: []]
   end
 end
