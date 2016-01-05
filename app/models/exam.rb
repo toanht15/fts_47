@@ -13,6 +13,10 @@ class Exam < ActiveRecord::Base
 
   before_create :generate_questions
 
+  def remain_time
+    Settings.exam.duration * Settings.exam.minute - spent_time.to_i
+  end
+
   private
   def generate_questions
     self.questions = self.category.questions.order("RANDOM()").

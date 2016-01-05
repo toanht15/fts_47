@@ -8,6 +8,7 @@ class ExamsController < ApplicationController
   end
 
   def show
+    @time_remaining = @exam.remain_time
   end
 
   def create

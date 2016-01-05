@@ -101,6 +101,7 @@ en:
     finish: "Finish"
     save: "Save"
     test: "Test"
+    time_over: "Time Over"
     label:
       created_date: "Created Date"
       category: "Category"
