@@ -18,6 +18,7 @@ gem "devise"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "cancancan"
 gem "ransack"
+gem "roo"
 
 group :development, :test do
   gem "byebug"

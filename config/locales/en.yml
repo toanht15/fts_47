@@ -37,6 +37,11 @@ en:
   header_users_link: "Users"
   admin_set_users: "Set admin"
   user_type: "normal"
+  unfile: "Unknown file type:"
+  import_suscess: "Import successfull!"
+  dowload: "Dowload"
+  import: "Import"
+  csv: "CSV"
   category:
     title: "Category"
     created_successfull: "Category created successfull"

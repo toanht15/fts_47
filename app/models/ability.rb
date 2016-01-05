@@ -9,6 +9,7 @@ class Ability
       can :read, :all
       can [:create, :read], Exam
       can [:create, :update, :destroy], Question
+      can :read, Category
     end
   end
 end

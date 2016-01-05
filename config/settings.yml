@@ -16,3 +16,7 @@ exam:
   question_number: 15
 filter:
   all: "all"
+csv:
+  type: .csv
+  row: 1
+  last_row: 2

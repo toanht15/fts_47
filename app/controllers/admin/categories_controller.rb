@@ -17,6 +17,10 @@ class Admin::CategoriesController < ApplicationController
 
   def index
     @categories = Category.page params[:page]
+    respond_to do |format|
+      format.html
+      format.csv {send_data @categories.to_csv}
+    end
   end
 
   def edit

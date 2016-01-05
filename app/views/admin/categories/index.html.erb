@@ -21,6 +21,14 @@
           </tbody>
         </table>
         <%= paginate @categories %>
+        <div class="col-lg-3">
+          <%= t "dowload" %>
+          <%= link_to t("csv"), admin_categories_path(format: "csv") %>
+          <%= form_tag admin_imports_path, multipart: true do %>
+            <%= file_field_tag :file %>
+            <%= submit_tag t("import"), class: "btn btn-primary btn-sm"  %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
