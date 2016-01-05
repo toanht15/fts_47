@@ -14,6 +14,8 @@ question:
 exam:
   duration: 30
   question_number: 15
+  minute: 60
+  time_out: 0
 filter:
   all: "all"
 csv:
