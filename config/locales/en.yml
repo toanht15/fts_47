@@ -31,6 +31,9 @@ en:
   user_logout: "Log out"
   user_delete_account: "delete account"
   user_delete_account_confirm: "Are you sure?"
+  user_search:
+    name_holder: "Enter name!"
+    email_holder: "Enter email!"
   delete: "delete"
   you_sure: "You sure?"
   admin_all_users: "All users"
