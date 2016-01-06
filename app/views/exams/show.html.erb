@@ -18,11 +18,20 @@
     <div class="list-question">
       <%= form_for @exam do |f| %>
         <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.hidden_field :status, value: :uncheck %>
+        <%= f.hidden_field :status, value: :uncheck, class: "status_exam" %>
         <%= f.fields_for :results do |builder| %>
           <%= render "question", f: builder %>
         <% end %>
-        <%= f.submit t("exam.finish"), class: "btn btn-primary" if @exam.start? || @exam.testing? %>
+        <% if @exam.start? || @exam.testing? %>
+          <div class="row">
+            <div class="col-md-4">
+              <%= f.submit t("exam.save"), class: "btn btn-primary", id: "save_exam"  %>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+              <%= f.submit t("exam.finish"), class: "btn btn-danger"  %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

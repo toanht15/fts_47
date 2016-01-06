@@ -101,6 +101,8 @@ en:
     finish: "Finish"
     save: "Save"
     test: "Test"
+    view: "View"
+    saved: "Saved"
     time_over: "Time Over"
     label:
       created_date: "Created Date"
