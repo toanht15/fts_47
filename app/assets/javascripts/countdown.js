@@ -27,3 +27,7 @@ var ready_var = function(){
 
 $(document).ready(ready_var);
 $(document).on("page:load", ready_var);
+$(document).on("click", "#save_exam", function() {
+  $(".status_exam").attr("value", "testing");
+  return true;
+});

@@ -8,9 +8,5 @@
     <% end %>
   </td>
   <td><%= exam.mark %></td>
-  <% if exam.start? %>
-    <td><%= link_to t("exam.start"), exam, class: "btn btn-primary" %></td>
-  <% else %>
-    <td><%= link_to t("exam.view"), exam, class: "btn btn-success" %></td>
-  <% end %>
+  <td><%= link_to t("exam.view"), admin_exam_path(exam), class: "btn btn-success" if !exam.start? %></td>
 </tr>
