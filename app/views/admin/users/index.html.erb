@@ -2,16 +2,23 @@
 <h1><%= t "admin_all_users" %></h1>
 
 <div class="container">
-  <%= search_form_for [:admin, @search] do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name_eq %>
-
-    <%= f.label :email %>
-    <%= f.text_field :email_eq %>
-
-    <%= f.submit t("search") %>
-  <% end %>
-
+  <div class="form-horizontal">
+  <fieldset>
+    <%= search_form_for [:admin, @search] do |f| %>
+      <div class="form-group">
+        <div class="col-lg-3">
+          <%= f.text_field :name_eq, class: "form-control", placeholder: t("user_search.name_holder") %>
+        </div>
+        <div class="col-lg-3">
+          <%= f.text_field :email_eq, class: "form-control", placeholder: t("user_search.email_holder") %>
+        </div>
+        <div class="col-lg-1">
+          <%= f.submit t("search"), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </fieldset>
+  </div>
   <table class="table table-bordered">
     <tbody>
       <%= render @users %>
