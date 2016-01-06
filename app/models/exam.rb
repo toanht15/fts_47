@@ -17,6 +17,10 @@ class Exam < ActiveRecord::Base
     Settings.exam.duration * Settings.exam.minute - spent_time.to_i
   end
 
+  def time_spent
+    spent_time.to_i + (Time.zone.now - updated_at).to_i
+  end
+
   private
   def generate_questions
     self.questions = self.category.questions.order("RANDOM()").

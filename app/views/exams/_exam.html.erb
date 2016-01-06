@@ -2,7 +2,15 @@
   <td><%= exam.created_at.strftime t("time") %></td>
   <td><%= exam.category.name %></td>
   <td><%= exam.status %></td>
-  <td><%= exam.spent_time %></td>
+  <td>
+    <% if exam.spent_time.present? %>
+      <%= "#{exam.spent_time / Settings.exam.minute} : #{exam.spent_time % Settings.exam.minute}" %>
+    <% end %>
+  </td>
   <td><%= exam.mark %></td>
-  <td><%= link_to t("exam.start"), exam_path(exam), class: "btn btn-primary" %></td>
+  <% if exam.start? %>
+    <td><%= link_to t("exam.start"), exam, class: "btn btn-primary" %></td>
+  <% else %>
+    <td><%= link_to t("exam.view"), exam, class: "btn btn-success" %></td>
+  <% end %>
 </tr>

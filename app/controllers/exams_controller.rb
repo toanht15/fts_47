@@ -20,6 +20,16 @@ class ExamsController < ApplicationController
     redirect_to :back
   end
 
+  def update
+    @exam.spent_time = @exam.time_spent
+    if @exam.update_attributes exam_params
+      flash[:success] = t "exam.saved"
+    else
+      flash[:danger] = t "error"
+    end
+    redirect_to exams_path
+  end
+
   private
   def exam_params
     params.require(:exam).permit :category_id, :user_id, :status, results_attributes: [
