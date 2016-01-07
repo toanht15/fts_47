@@ -16,6 +16,11 @@ exam:
   question_number: 15
   minute: 60
   time_out: 0
+  status:
+    start: "start"
+    testing: "testing"
+    uncheck: "uncheck"
+    checked: "checked"
 filter:
   all: "all"
 csv:

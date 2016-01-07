@@ -1,7 +1,7 @@
 <tr>
   <td><%= exam.created_at.strftime t("time") %></td>
   <td><%= exam.category.name %></td>
-  <td><%= exam.status %></td>
+  <td><%= status_exam exam %></td>
   <td>
     <% if exam.spent_time.present? %>
       <%= "#{exam.spent_time / Settings.exam.minute} : #{exam.spent_time % Settings.exam.minute}" %>

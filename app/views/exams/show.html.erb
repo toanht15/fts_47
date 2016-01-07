@@ -19,9 +19,11 @@
       <%= form_for @exam do |f| %>
         <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.hidden_field :status, value: :uncheck, class: "status_exam" %>
-        <%= f.fields_for :results do |builder| %>
-          <%= render "question", f: builder %>
-        <% end %>
+        <ol>
+          <%= f.fields_for :results do |builder| %>
+            <%= render "question", f: builder %>
+          <% end %>
+        </ol>
         <% if @exam.start? || @exam.testing? %>
           <div class="row">
             <div class="col-md-4">
