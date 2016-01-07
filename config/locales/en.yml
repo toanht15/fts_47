@@ -116,3 +116,8 @@ en:
       status: "Status"
       spent_time: "Spent Time"
       mark: "Score"
+    status:
+      start: "start"
+      testing: "testing"
+      uncheck: "uncheck"
+      checked: "checked"
