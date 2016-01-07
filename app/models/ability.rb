@@ -6,6 +6,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
+      can [:create, :update], User
       can :read, :all
       can [:create, :update, :read], Exam
       can [:create, :update, :destroy], Question

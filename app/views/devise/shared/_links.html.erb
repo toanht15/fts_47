@@ -1,0 +1,11 @@
+<div class="col-md-offset-4 col-md-4">
+  <% if devise_mapping.omniauthable? %>
+    <% resource_class.omniauth_providers.each do |provider| %>
+      <a class="btn btn-block btn-social btn-facebook"
+        href="<%= omniauth_authorize_path resource_name, provider %>">
+        <span class="fa fa-facebook"></span>
+        <%= provider.to_s.titleize %>
+      </a>
+    <% end %>
+  <% end %>
+</div>
