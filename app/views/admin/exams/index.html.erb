@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-bordered">
+      <tr>
+        <th><%= t "exam.label.created_date" %></th>
+        <th><%= t "exam.label.category" %></th>
+        <th><%= t "exam.label.status" %></th>
+        <th><%= t "exam.label.spent_time" %></th>
+        <th><%= t "exam.label.mark" %></th>
+        <th></th>
+      </tr>
+      <%= render @exams %>
+    </table>
+    <%= paginate @exams %>
+  </div>
+</div>
+

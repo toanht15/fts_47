@@ -19,6 +19,7 @@ en:
     help: "Help"
     login: "Log in"
     contribute: "Contribute Question"
+    exam: "Manage Exams"
   signup:
     signup_now: "Sign up now!"
   user_submit: "Sign up"
@@ -107,6 +108,8 @@ en:
     view: "View"
     saved: "Saved"
     time_over: "Time Over"
+    correct: "Correct"
+    incorect: "Incorrect"
     label:
       created_date: "Created Date"
       category: "Category"
