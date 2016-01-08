@@ -110,6 +110,7 @@ en:
     time_over: "Time Over"
     correct: "Correct"
     incorect: "Incorrect"
+    check: "Check"
     label:
       created_date: "Created Date"
       category: "Category"

@@ -2,7 +2,7 @@ class Admin::ExamsController < ApplicationController
   load_resource
 
   def index
-    @exams = @exams.page params[:page]
+    @exams = @exams.order_desc.page params[:page]
   end
 
   def show

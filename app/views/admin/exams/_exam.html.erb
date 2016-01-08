@@ -8,5 +8,5 @@
     <% end %>
   </td>
   <td><%= exam.mark %></td>
-  <td><%= link_to t("exam.view"), admin_exam_path(exam), class: "btn btn-primary" %></td>
+  <td><%= link_to t("exam.check"), admin_exam_path(exam), class: "btn btn-primary" if exam.uncheck? %></td>
 </tr>
