@@ -4,7 +4,7 @@ class ExamsController < ApplicationController
   def index
     @category = Category.all
     @exam = Exam.new
-    @exams = @exams.page params[:page]
+    @exams = @exams.order_desc.page params[:page]
   end
 
   def show
