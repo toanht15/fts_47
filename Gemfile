@@ -23,6 +23,7 @@ gem "cancancan"
 gem "ransack"
 gem "roo"
 gem "sidekiq"
+gem "friendly_id"
 
 group :development, :test do
   gem "byebug"
