@@ -10,7 +10,8 @@ question:
     multiple: "multiple_choices"
     text: "text"
   num_correct: 1
-
+email:
+  time: 8.hours.from_now
 exam:
   duration: 30
   question_number: 15
