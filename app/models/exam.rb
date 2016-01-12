@@ -37,6 +37,16 @@ class Exam < ActiveRecord::Base
 
   handle_asynchronously :send_email_delay_exam, run_at: Proc.new {Settings.email.time}
 
+  class << self
+    def notify_when_end_of_month
+      Exam.all.each{|exam| ExamMailer.notify_when_end_of_month(exam).deliver_now}
+    end
+
+    def statistic_question_true
+      self.results.where(correct: true).size
+    end
+  end
+
   private
   def generate_questions
     self.questions = self.category.questions.order("RANDOM()").

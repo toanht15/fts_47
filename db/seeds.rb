@@ -44,14 +44,3 @@ Question.all.each do |n|
       question_id: n.id)
   end
 end
-
-Category.all.each{|category|
-  10.times do |n|
-    user_id = 3
-    status = 0
-    Exam.create!(
-      user_id: user_id,
-      category_id: category.id,
-      status: status)
-end
-}
