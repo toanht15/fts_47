@@ -21,6 +21,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "cancancan"
 gem "ransack"
 gem "roo"
+gem "sidekiq"
 
 group :development, :test do
   gem "byebug"

@@ -126,3 +126,8 @@ en:
       testing: "testing"
       uncheck: "uncheck"
       checked: "checked"
+  mail:
+    result_exam_subject: "Result Exam"
+    dear: "Dear "
+    your_mark: "Your mark: "
+    thank: "Thank you"

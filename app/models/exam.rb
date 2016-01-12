@@ -17,6 +17,7 @@ class Exam < ActiveRecord::Base
 
   before_create :generate_questions
   after_update :update_mark, if: :checked?
+  after_update :send_result_exam_email
 
   def remain_time
     Settings.exam.duration * Settings.exam.minute - spent_time.to_i
@@ -46,5 +47,9 @@ class Exam < ActiveRecord::Base
 
   def update_mark
     self.update_column :mark, self.calculate_mark
+  end
+
+  def send_result_exam_email
+    HardWorker.perform_async self.id if self.checked?
   end
 end
