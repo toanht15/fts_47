@@ -23,6 +23,9 @@ en:
   signup:
     signup_now: "Sign up now!"
   user_submit: "Sign up"
+  email:
+    exam_delay: "Exam don't start after 8 hours"
+    exam_result: "Number of correct questions"
   user_update: "Update"
   user_edit: "Edit user"
   user_editprofile: "Profile"

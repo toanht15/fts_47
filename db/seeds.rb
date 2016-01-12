@@ -12,10 +12,11 @@ User.create!(email: "thetoan@gmail.com", password: "12345678", admin: true)
     password_confirmation: password, admin: false)
 end
 
-10.times do |n|
-  name = Faker::Lorem.word
-  Category.create(name: name)
-end
+Category.create! name: "PHP and MySQL"
+Category.create! name: "Git"
+Category.create! name: "Ruby On Rails"
+Category.create! name: "Android"
+Category.create! name: "Java"
 
 Category.all.each{|category|
   20.times do |n|
