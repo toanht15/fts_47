@@ -8,6 +8,7 @@ class Admin::CategoriesController < ApplicationController
   def create
     @categories = Category.new category_params
     if @categories.save
+      CategoryNotificationService.new(@categories).mail_to_user_when_create
       flash[:success] = t "category.created_successfull"
       redirect_to admin_categories_path
     else

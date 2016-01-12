@@ -26,6 +26,10 @@ en:
   email:
     exam_delay: "Exam don't start after 8 hours"
     exam_result: "Number of correct questions"
+    create_category: "New Category"
+    hi: "Hi my friend!"
+    have_new_category: "We are having a new category is"
+    join: ". Would you like to join it?"
   user_update: "Update"
   user_edit: "Edit user"
   user_editprofile: "Profile"
