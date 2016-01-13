@@ -1,6 +1,7 @@
 <h1><%= t "user_login_title" %></h1>
 
 <div class="row">
+  <%= render "devise/shared/links" %>
   <div class="col-md-6 col-md-offset-3">
     <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
       <%= f.label :email %><br />

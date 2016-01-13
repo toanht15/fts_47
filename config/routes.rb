@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
   get "about" => "static_pages#about"
-  devise_for :users
+
   devise_scope :user do
     authenticated :user do
       root to: "exams#index", as: "authenticated_root"
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
     end
   end
   resources :questions
+  resources :users
 
   namespace :admin do
     root "categories#index"

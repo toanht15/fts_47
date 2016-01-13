@@ -22,6 +22,11 @@ en:
     exam: "Manage Exams"
   signup:
     signup_now: "Sign up now!"
+  fasebook_login:
+    add_email: "Add email"
+    placeholder: "Example: email@me.com"
+    confirm: "Please confirm your email address. No spam."
+    continue: "Continue"
   user_submit: "Sign up"
   email:
     exam_delay: "Exam don't start after 8 hours"
