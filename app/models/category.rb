@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
   require "csv"
   has_many :exams, dependent: :destroy
   has_many :questions, dependent: :destroy
-  validates :name, presence: true, length: {maximum: 50}
+  validates :name, presence: true, length: {maximum: 50}, uniqueness: true
 
   class << self
     def to_csv options = {}
