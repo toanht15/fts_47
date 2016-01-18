@@ -5,6 +5,8 @@ FactoryGirl.define do
     f.email {Faker::Internet.email}
     f.password {"pa0974340719"}
     f.password_confirmation {"pa0974340719"}
-    f.admin {true}
+    factory :admin do
+      f.admin {true}
+    end
   end
 end
