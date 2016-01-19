@@ -37,6 +37,7 @@ group :development, :test do
   gem "shoulda-matchers", "~> 3.0"
   gem "capybara"
   gem "rspec-collection_matchers"
+  gem "rspec-activemodel-mocks"
 end
 
 group :development do
